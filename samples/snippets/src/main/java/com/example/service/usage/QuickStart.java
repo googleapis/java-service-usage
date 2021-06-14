@@ -7,7 +7,6 @@ import com.google.api.serviceusage.v1.ServiceUsageClient;
 import com.google.longrunning.Operation;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
-import sun.tools.tree.BreakStatement;
 
 public class QuickStart {
 
@@ -21,12 +20,14 @@ public class QuickStart {
   public static void enableService(String projectId, String service) {
     try (ServiceUsageClient serviceUsageClient = ServiceUsageClient.create()) {
 
-      EnableServiceRequest enableServiceRequest = EnableServiceRequest.newBuilder()
-          .setName("projects/" + projectId + "/services/" + service).build();
-      ApiFuture<Operation> future = serviceUsageClient.enableServiceCallable()
-          .futureCall(enableServiceRequest);
+      EnableServiceRequest enableServiceRequest =
+          EnableServiceRequest.newBuilder()
+              .setName("projects/" + projectId + "/services/" + service)
+              .build();
+      ApiFuture<Operation> future =
+          serviceUsageClient.enableServiceCallable().futureCall(enableServiceRequest);
 
-      //do something
+      // do something
 
       Operation response = future.get();
 
@@ -42,12 +43,14 @@ public class QuickStart {
   public static void disableService(String projectId, String service) {
     try (ServiceUsageClient serviceUsageClient = ServiceUsageClient.create()) {
 
-      DisableServiceRequest disableServiceRequest = DisableServiceRequest.newBuilder()
-          .setName("projects/" + projectId + "/services/" + service).build();
-      ApiFuture<Operation> future = serviceUsageClient.disableServiceCallable()
-          .futureCall(disableServiceRequest);
+      DisableServiceRequest disableServiceRequest =
+          DisableServiceRequest.newBuilder()
+              .setName("projects/" + projectId + "/services/" + service)
+              .build();
+      ApiFuture<Operation> future =
+          serviceUsageClient.disableServiceCallable().futureCall(disableServiceRequest);
 
-      //Do something
+      // Do something
 
       Operation response = future.get();
 
