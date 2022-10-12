@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.8](https://github.com/googleapis/java-service-usage/compare/v2.2.7...v2.2.8) (2022-10-12)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (2.2.x) ([#313](https://github.com/googleapis/java-service-usage/issues/313)) ([37fee45](https://github.com/googleapis/java-service-usage/commit/37fee45347ad0d13b682ff275e1273af939a142e))
+
 ### [2.2.7](https://github.com/googleapis/java-service-usage/compare/v2.2.6...v2.2.7) (2022-04-15)
 
 
